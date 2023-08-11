@@ -23,10 +23,6 @@ export class DocumentUploadedFileComponent {
     });
   }
 
-  ngOnInit() {
-    this.id = this.route.snapshot.params['id'];
-  }
-
   submit() {
     this.submitted = true;
     if (this.uploadedForm.valid) {
@@ -52,5 +48,9 @@ export class DocumentUploadedFileComponent {
     } else {
       this.alertService.showWarning('This is input Empty ?');
     }
+  }
+
+  backButton(){
+
   }
 }

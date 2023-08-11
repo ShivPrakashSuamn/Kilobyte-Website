@@ -10,7 +10,7 @@
     <div class="panel-heading bg-light">
         <div class="row">
             <div class="col-lg-10">
-                <button mat-raised-button class=" btn all">All</button>
+                <button mat-raised-button class=" btn all" onclick="window.history.back()"><i class='bx bx-left-arrow-alt icon-back'></i></button>
             </div>
             <div class="col-lg-2">
                 <button mat-button [matMenuTriggerFor]="menu" class="dropdown-toggle"> All members </button>
@@ -70,7 +70,10 @@
                     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
+                <mat-paginator [length]="200" [pageSizeOptions]="[10, 50, 100]" aria-label="Select page"></mat-paginator>
             </div>
         </div>
     </div>
 </div>
+
+<ngx-ui-loader></ngx-ui-loader>

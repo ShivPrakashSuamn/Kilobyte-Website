@@ -1,39 +1,47 @@
-
-.panel{
-	margin-left: 150px;
+.panel {
+    margin-left: 150px;
 }
+
 .all {
     background: white;
     border-radius: 30px;
     margin: 18px 30px;
 }
-.dropdown-toggle{
+
+.dropdown-toggle {
     background: white;
     color: black;
     border-radius: 10px;
-	padding: 18px;
+    padding: 18px;
     margin: 18px 40px;
     box-shadow: 0px 2px 7px #bababa;
     float: right;
 }
-.panel-body{
-	padding: 11px 50px;
+
+.panel-body {
+    padding: 11px 50px;
 }
 
-.add-btn{
+.add-btn {
     background: #f5f1ff;
     padding: 10px 13px;
     border-radius: 5px;
     margin: 0px 10px;
     color: #876bf3;
     font-size: 15px;
-	text-decoration: none;
+    text-decoration: none;
 }
+
 .add-btn:hover {
     background: #e0d8f7;
     color: #6547db;
 }
-th{
-	padding: 18px;
-	color: #a3abb5;
+
+th {
+    padding: 18px;
+    color: #a3abb5;
+}
+
+.icon-back {
+    font-size: 30px;
 }

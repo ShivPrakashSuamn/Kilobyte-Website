@@ -9,7 +9,7 @@
     <div class="panel-heading bg-light">
         <div class="row">
             <div class="col-lg-10">
-                <button mat-raised-button class=" btn all">All</button>
+                <button mat-raised-button class="btn all" onclick="window.history.back()"><i class='bx bx-left-arrow-alt icon-back'></i></button>
             </div>
             <div class="col-lg-2">
                 <button mat-button [matMenuTriggerFor]="menu" class="dropdown-toggle"> All members </button>
@@ -34,7 +34,7 @@
                         <mat-label> preview Path : </mat-label>
                         <input matInput formControlName="preview">
                     </mat-form-field>
-                    <button mat-raised-button color="primary" type="submit">Submit </button>
+                    <button mat-raised-button color="primary" type="submit">Submit <i class='bx bx-upload'></i></button>
                   </form>
             </div>
         </div>
@@ -44,3 +44,5 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous">
 </script>
+
+<ngx-ui-loader></ngx-ui-loader>

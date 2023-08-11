@@ -1,38 +1,42 @@
-
-.panel{
-	margin-left: 150px;
+.panel {
+    margin-left: 150px;
 }
+
 .all {
     background: white;
     border-radius: 30px;
     margin: 18px 30px;
 }
-.dropdown-toggle{
+
+.dropdown-toggle {
     background: white;
     color: black;
     border-radius: 10px;
-	padding: 18px;
+    padding: 18px;
     margin: 18px 40px;
     box-shadow: 0px 2px 7px #bababa;
     float: right;
 }
-.panel-body{
-	padding: 11px 50px;
-}
-.teble-box{
-	box-shadow: 0px 0px 10px #dddddd;
-	border-radius: 10px;
+
+.panel-body {
+    padding: 11px 50px;
 }
 
-th{
-	padding: 15px;
-	color: #a3abb5;
+.teble-box {
+    box-shadow: 0px 0px 10px #dddddd;
+    border-radius: 10px;
 }
 
-td{
-	padding: 15px;
+th {
+    padding: 15px;
+    color: #a3abb5;
 }
-.user-btn{
+
+td {
+    padding: 15px;
+}
+
+.user-btn {
     background: #f5f1ff;
     padding: 10px 13px;
     border-radius: 5px;
@@ -40,29 +44,37 @@ td{
     color: #876bf3;
     font-size: 15px;
 }
+
 .user-btn:hover {
     background: #e4daff;
     color: #380ce0;
 }
+
 .disabled {
-	background: #eff0ef !important;
+    background: #eff0ef !important;
     color: #b4b4b4 !important;
 }
+
 .disabled:hover {
     background: #dedede !important;
     color: #666363 !important;
 }
 
-.main-menu li a i{
-	padding: 18px 18px;
-    border-radius: 50%;
-}
-.main-menu li a i:hover {
-	background: #8385e3;
-	padding: 18px 18px;
+.main-menu li a i {
+    padding: 18px 18px;
     border-radius: 50%;
 }
 
-mat-form-field{
+.main-menu li a i:hover {
+    background: #8385e3;
+    padding: 18px 18px;
+    border-radius: 50%;
+}
+
+mat-form-field {
     width: 100% !important;
+}
+
+.icon-back {
+    font-size: 30px;
 }
