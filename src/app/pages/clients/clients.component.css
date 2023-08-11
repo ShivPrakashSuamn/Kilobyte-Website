@@ -19,19 +19,12 @@
 .panel-body{
 	padding: 11px 50px;
 }
-.teble-box{
-	box-shadow: 0px 0px 10px #dddddd;
-	border-radius: 10px;
-}
 
 th{
 	padding: 18px;
 	color: #a3abb5;
 }
 
-td{
-	padding: 18px;
-}
 .user-btn{
     background: #f5f1ff;
     padding: 10px 13px;

@@ -25,31 +25,38 @@
     <div class="row">
         <div class="panel-body mt-4">
             <div class="teble-box">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Client Id</th>
-                            <th> Compamy name</th>
-                            <th> Creation date</th>
-                            <th>Assigend member</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let row of data">
-                            <td class="text-primary"> {{ row.clientID }} </td>
-                            <td class="text-primary"> {{ row.companyName }} </td>
-                            <td> {{ row.createdAt | date : 'mediumDate' }} </td>
-                            <td> {{ row.name }} </td>
-                            <td>
-                                <a href="/documents/{{row._id}}" class="user-btn"> <i class="fa fa-user-o"></i></a> 
-                                <a href="javascript:void(0);" class="user-btn disabled" disabled> <i class="fa fa-user-o"></i></a>
-                            </td>
-                        </tr>
-                        <tr *ngIf="data.length == 0">
-                            <td colspan="7" style="text-align:center" class="text-danger">No Record Found</td>
-                        </tr>
-                    </tbody>
+                <table mat-table [dataSource]="data" class="mat-elevation-z8 mb-4">
+
+                    <ng-container matColumnDef="clientID">
+                      <th mat-header-cell *matHeaderCellDef> Client ID </th>
+                      <td mat-cell *matCellDef="let element" class="text-primary"> {{element.clientID}} </td>
+                    </ng-container>
+                  
+                    <ng-container matColumnDef="companyName">
+                      <th mat-header-cell *matHeaderCellDef> Company Name </th>
+                      <td mat-cell *matCellDef="let element" class="text-primary"> {{element.companyName}} </td>
+                    </ng-container>
+                  
+                    <ng-container matColumnDef="createdAt">
+                      <th mat-header-cell *matHeaderCellDef> Creation Date </th>
+                      <td mat-cell *matCellDef="let element"> {{element.createdAt | date : 'mediumDate'}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="name">
+                      <th mat-header-cell *matHeaderCellDef> Assigend member  </th>
+                      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="action">
+                        <th mat-header-cell *matHeaderCellDef> Action  </th>
+                        <td mat-cell *matCellDef="let element">
+                            <a href="/documents/{{element._id}}" class="user-btn"> <i class="fa fa-user-o"></i></a> 
+                            <a href="javascript:void(0);" class="user-btn disabled" disabled> <i class="fa fa-user-o"></i></a>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
             </div>
             <div  *ngIf="totalPage">

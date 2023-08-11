@@ -11,7 +11,8 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatTableModule } from '@angular/material/table';
 
 //  Component   ---
 import { LoginComponent } from './auth/login/login.component';
@@ -30,7 +31,7 @@ import { NgToastModule } from 'ng-angular-popup';
     ClientsComponent,
     DocumentUploadedFileComponent,
     DocumentsComponent,
-    PaginationComponent, 
+    PaginationComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,12 +42,13 @@ import { NgToastModule } from 'ng-angular-popup';
     RouterModule,
     HttpClientModule,
     NgToastModule,
-    
+
     // material ---
     MatButtonModule,
     MatInputModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTableModule
   ],
   providers: [provideAnimations()],
   bootstrap: [AppComponent]

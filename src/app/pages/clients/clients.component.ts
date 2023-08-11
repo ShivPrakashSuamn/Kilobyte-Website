@@ -21,6 +21,7 @@ export class ClientsComponent {
   order_type:any = 'desc';
   data: any = [];
   allOrders: any;
+  displayedColumns: string[] = ['clientID', 'companyName', 'createdAt', 'name', 'action'];
 
   constructor(private apiService: ApiService, private alertService: AlertService, private route:Router ) {
 

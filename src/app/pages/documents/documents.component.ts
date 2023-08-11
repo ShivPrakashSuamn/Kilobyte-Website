@@ -21,6 +21,8 @@ export class DocumentsComponent {
   loginData: any;
   orderData: any = [];
   userAddress: any = [];
+  displayedColumns: string[] = ['category', 'type', 'client_name', 'compamy_name', 'status', 'creation_date', 'documents_count', 'action'];
+  
   // ------------------    life cycle of angular    ----------------------- ||
 
   constructor(private apiService: ApiService, private alertService: AlertService, private route: ActivatedRoute, private routr: Router) { }
@@ -50,17 +52,6 @@ export class DocumentsComponent {
         this.alertService.showInfo('No Record Found ?');
       }
     });
-  }
-  pageChange(e: any) {    //  Page Change funcation   -----------------------------
-    this.page = e;
-    this.getData(this.id);
-  }
-
-  getTOFROM() {          //  pagination List  offset  ----------------------------
-    let offset = (this.page - 1) * this.limit;
-    let l = this.limit;
-    let lastOffset = parseInt(l) + offset;
-    return `${offset + 1} to ${lastOffset}`;
   }
 
   logout() {
