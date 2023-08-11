@@ -1,0 +1,143 @@
+#sidemenu {
+	position: fixed;
+	width: 150px;
+	height: auto;
+	top: 0px;
+	bottom: 0;
+	overflow: hidden;
+	background-color: #2f31d1;
+	-webkit-transition: all .1s ease-in;
+	-moz-transition: all .1s ease-in;
+	-ms-transition: all .1s ease-in;
+	-o-transition: all .1s ease-in;
+	transition: all .1s ease-in;
+	z-index: 5;
+}
+
+.main-menu ul {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.main-menu li a {
+	/* display: grid; */
+	line-height: 32px;
+	text-align: center;
+	padding: 10px 0px;
+	font-size: 20px;
+	text-decoration: none;
+	color: #ffffff;
+}  
+
+.main-menu li a span{
+	font-size: 12px;
+}  
+.main-menu.bottom {
+	position: absolute;
+	bottom: 10px;
+	border-top: 1px solid rgb(64, 64, 64);
+	margin-left: 11px;
+}
+.margin-l{
+	margin-left: 170px !important;
+}
+.d-flex > input{
+	border-radius: 30px !important;
+}
+.add-client{
+    border-radius: 10px;
+    padding: 26px;
+    margin: 25px;
+    background-color: #5cc4a8 !important;
+}
+.title-lick{  
+	color: white;
+	text-decoration: none;
+}
+.title-lick:hover{  
+	color: white;
+}
+.panel{
+	margin-left: 150px;
+}
+.all {
+	padding: 3px 12px;
+	margin: 0;
+	background: white;
+	border-radius: 30px;
+	margin: 13px 25px;
+	color: #1beb96;
+}
+.dropdown-toggle{
+	background: white;
+	color: black;
+	border-radius: 9px;
+	border: none;
+	padding: 5px;
+	margin: 12px;
+}
+.panel-body{
+	padding: 11px 50px;
+}
+.teble-box{
+	box-shadow: 0px 0px 10px #dddddd;
+	border-radius: 10px;
+}
+
+th{
+	padding: 15px;
+	color: #a3abb5;
+}
+
+td{
+	padding: 15px;
+}
+.user-btn{
+    background: #f5f1ff;
+    padding: 10px 13px;
+    border-radius: 5px;
+    margin: 0px 10px;
+    color: #876bf3;
+    font-size: 15px;
+}
+.user-btn:hover {
+    background: #e4daff;
+    color: #380ce0;
+}
+.disabled {
+	background: #eff0ef !important;
+    color: #b4b4b4 !important;
+}
+.disabled:hover {
+    background: #dedede !important;
+    color: #666363 !important;
+}
+
+.main-menu li a i{
+	padding: 18px 18px;
+    border-radius: 50%;
+}
+.main-menu li a i:hover {
+	background: #8385e3;
+	padding: 18px 18px;
+    border-radius: 50%;
+}
+
+.title::first-letter {
+	text-transform: uppercase;
+}
+form{
+	width: 400px;
+    border-radius: 20px;
+}  
+
+form > div > input {
+	border: none;
+    background: transparent;
+    border-radius: 20px;
+}
+form > div > div > button {
+	border-radius: 0px 20px 20px 0px;
+}

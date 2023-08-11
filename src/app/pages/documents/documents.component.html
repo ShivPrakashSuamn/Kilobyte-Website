@@ -1,0 +1,81 @@
+<!-- *** NAVBER *** -->
+
+<app-sidebar></app-sidebar>
+
+<!-- *** END NAVBER *** -->
+
+<!-- *** Body *** -->
+
+<div class="panel panel-default ">
+    <div class="panel-heading bg-light">
+        <div class="row">
+            <div class="col-lg-10">
+                <button mat-raised-button class=" btn all">All</button>
+            </div>
+            <div class="col-lg-2">
+                <button mat-button [matMenuTriggerFor]="menu" class="dropdown-toggle"> All members </button>
+                    <mat-menu #menu="matMenu">
+                    <button mat-menu-item>Client</button>
+                    <button mat-menu-item>Contect</button>
+                    <button mat-menu-item>Something else here</button>
+                </mat-menu>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel-body mt-4">
+            <div class="teble-box">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th> Category </th>
+                            <th> Type </th>
+                            <th> Client name </th>
+                            <th> Compamy name </th>
+                            <th> Status</th>
+                            <th> Creation date</th>
+                            <th> Documents Count </th>
+                            <th> Action </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let row of data let i = index ">
+                            <td class="text-primary"> {{ row.category }} </td>
+                            <td class="text-primary"> {{ row.type }} </td>
+                            <td class="text-primary"> {{ row.client.name }} </td>
+                            <td class="text-primary"> {{ row.client.companyName }} </td>
+                            <td> {{ row.status }} </td>
+                            <td> {{ row.createdAt | date : 'mediumDate' }} </td>
+                            <td>
+                                <span *ngIf="row.folder && !row.folder.length" >0</span>
+                                <span *ngIf="row.folder && row.folder.length > 0" >{{ row.folder.length }} </span>
+                            </td>
+                            <td>
+                                <a href="/documentsFile/{{row._id}}" class="add-btn"> add </a> 
+                            </td>
+                        </tr>
+                        <tr *ngIf="data.length == 0">
+                            <td colspan="7" style="text-align:center" class="text-danger">No Record Found</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div  *ngIf="totalPage">
+                <span class="tex" style="margin: 0; color: #b6b6b6d9;"> Show </span> 
+                <div class="btn-group">
+                    <select class="form-select dropbutton" aria-label="Default select example"  [(ngModel)]="limit" (change)="getData(id)">
+                        <option selected value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+                <span style="margin: 0; color: #b6b6b6d9;"> Showing {{getTOFROM()}} of {{totalRows}} entries</span>
+                <!-- Pagination  System Design   -->
+                <div style=" float: right;">
+                    <app-pagination [totalPage]="totalPage" [page]="page" (newPage)="pageChange($event)"></app-pagination>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>

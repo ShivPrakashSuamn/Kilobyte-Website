@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid margin-l">
+        <a class="navbar-brand" href="javascript:void(0);"><h1 class="title">{{title}}</h1></a>
+        <button class="navbar-toggler  mb-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <span  class="navbar-nav me-auto mb-lg-0"></span>
+            <form class="d-flex bg-light">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search using cliend name or cliend id" name="search">
+                    <div class="input-group-btn">
+                      <button class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </div>
+                  </div>
+            </form>
+            <button mat-raised-button class="mt-1 mb-1 add-client">+ Add Client</button>
+        </div>
+    </div>
+</nav>
+<!-- Navigation - Start  -->
+<nav id="sidemenu">
+    <div class="main-menu">
+        <div class="row text-center m-3">
+            <h2><b><a href="#" class="title-lick">HMA</a></b></h2>
+        </div>
+        <div>
+        <ul class='main-menu'>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="fa fa-film"></i><br/> <span>Dashboard</span> 
+                </a>
+            </li>
+            <li>
+                <a href="/users">
+                    <i class="fa fa-user-o"></i><br/><span>Clients</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="fa fa-file-text-o"></i><br/><span>Documents</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="fa fa-tasks"></i><br/><span>Tasks</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <i class="fa fa-credit-card"></i><br/><span>Payment</span>
+                </a>
+            </li>
+        </ul>
+        <div class="row">
+            <ul class='main-menu bottom'>
+                <li>
+                    <a href="javascript:void(0);" (click)="logout()">
+                        <i class="fa fa-arrow-left"></i>
+                        <!-- <box-icon name='log-out'></box-icon> -->
+                    </a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+</nav>

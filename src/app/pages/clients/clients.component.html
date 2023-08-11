@@ -1,0 +1,78 @@
+<!-- *** NAVBER *** -->
+
+<app-sidebar></app-sidebar>
+
+<!-- *** END NAVBER *** -->
+
+<!-- *** Body *** -->
+
+<div class="panel panel-default ">
+    <div class="panel-heading bg-light">
+        <div class="row">
+            <div class="col-lg-10">
+                <button mat-raised-button class=" btn all">All</button>
+            </div>
+            <div class="col-lg-2">
+                <button mat-button [matMenuTriggerFor]="menu" class="dropdown-toggle"> All members </button>
+                    <mat-menu #menu="matMenu">
+                    <button mat-menu-item>Client</button>
+                    <button mat-menu-item>Contect</button>
+                    <button mat-menu-item>Something else here</button>
+                </mat-menu>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel-body mt-4">
+            <div class="teble-box">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Client Id</th>
+                            <th> Compamy name</th>
+                            <th> Creation date</th>
+                            <th>Assigend member</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let row of data">
+                            <td class="text-primary"> {{ row.clientID }} </td>
+                            <td class="text-primary"> {{ row.companyName }} </td>
+                            <td> {{ row.createdAt | date : 'mediumDate' }} </td>
+                            <td> {{ row.name }} </td>
+                            <td>
+                                <a href="/documents/{{row._id}}" class="user-btn"> <i class="fa fa-user-o"></i></a> 
+                                <a href="javascript:void(0);" class="user-btn disabled" disabled> <i class="fa fa-user-o"></i></a>
+                            </td>
+                        </tr>
+                        <tr *ngIf="data.length == 0">
+                            <td colspan="7" style="text-align:center" class="text-danger">No Record Found</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div  *ngIf="totalPage">
+                <span class="tex" style="margin: 0; color: #b6b6b6d9;"> Show </span> 
+                <div class="btn-group">
+                    <select class="form-select dropbutton" aria-label="Default select example"  [(ngModel)]="limit" (change)="getData()">
+                        <option selected value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+                <span style="margin: 0; color: #b6b6b6d9;"> Showing {{getTOFROM()}} of {{totalRows}} entries</span>
+                <!-- Pagination  System Design   -->
+                <div style=" float: right;">
+                    <app-pagination [totalPage]="totalPage" [page]="page" (newPage)="pageChange($event)"></app-pagination>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous">
+</script>
