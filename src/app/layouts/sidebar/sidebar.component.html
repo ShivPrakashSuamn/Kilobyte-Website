@@ -29,13 +29,13 @@
         <div>
         <ul class='main-menu'>
             <li>
-                <a href="javascript:void(0);">
+                <a href="javascript:void(0);" >
                     <i class="fa fa-film"></i><br/> <span>Dashboard</span> 
                 </a>
             </li>
             <li>
                 <a href="/users">
-                    <i class="fa fa-user-o"></i><br/><span>Clients</span>
+                    <i class="fa fa-user-o" [class.active]="getActive('users')"></i><br/><span>Clients</span>
                 </a>
             </li>
             <li>

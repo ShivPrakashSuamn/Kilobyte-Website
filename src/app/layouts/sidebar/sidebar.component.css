@@ -22,7 +22,6 @@
 }
 
 .main-menu li a {
-	/* display: grid; */
 	line-height: 32px;
 	text-align: center;
 	padding: 10px 0px;
@@ -167,4 +166,11 @@ form>div>div>button {
 .logout-a {
 	padding: 10px 12px !important;
 	border-radius: 50%;
+}
+span{
+	font-size: 14px;
+}
+
+.active{
+	background: #8385e3;
 }

@@ -29,7 +29,6 @@ export class ClientsComponent {
     let url: string = `/users?pageNo=${this.page}&size=${this.limit}`;
     let headers = new HttpHeaders().set("authorization", `${localStorage.getItem('token')}`);
     this.apiService.get(url, headers).subscribe((data: any) => {
-      console.log('----',data._metaData);
       if ( data.records.length > 0 ) {
         this.data = data.records;
         this.page = data._metaData.page;
@@ -43,13 +42,11 @@ export class ClientsComponent {
   }
 
   pageChange(e:any){    //  Page Change funcation   -----------------------------
-    console.log('dfd',e);
     this.page = e;
     this.getData();
   }
 
   getTOFROM(){          //  pagination List  offset  ----------------------------
-    console.log('dfd');
     let offset = (this.page -1 )*this.limit; 
     let l = this.limit;
     let lastOffset = parseInt(l)+offset; 
