@@ -1,4 +1,4 @@
-import { Component , Input, EventEmitter, Output } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-pagination',
@@ -12,7 +12,7 @@ export class PaginationComponent {
   @Output() newPage = new EventEmitter<string>();
 
   ngOnInit(): void {
-    console.log('Child Componet-',this.page)
+    console.log('Child Componet-', this.page)
   }
   pageChang(item: any) {
     this.page = item

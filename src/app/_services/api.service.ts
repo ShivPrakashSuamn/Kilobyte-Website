@@ -9,14 +9,14 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  get(url: string, options: any){
-    return this.http.get(this.BASE_URL + url, {headers : options});
+  get(url: string, options: any) {
+    return this.http.get(this.BASE_URL + url, { headers: options });
   }
 
-  post(url: string, formData: any, options: any){
+  post(url: string, formData: any, options: any) {
     return this.http.post(this.BASE_URL + url, formData, options);
   }
-  put(url: string, formData: any, options: any){
+  put(url: string, formData: any, options: any) {
     return this.http.put(this.BASE_URL + url, formData, options);
   }
 }

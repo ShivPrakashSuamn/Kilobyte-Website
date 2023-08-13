@@ -10,7 +10,6 @@ import { ApiService } from 'src/app/_services/api.service';
   styleUrls: ['./documents.component.css']
 })
 export class DocumentsComponent {
-  search: any = '';
   limit: any = 10;
   page: any = 1;
   totalRows: any = 0;
@@ -19,10 +18,8 @@ export class DocumentsComponent {
   id: any;
   loginUser: any;
   loginData: any;
-  orderData: any = [];
-  userAddress: any = [];
   displayedColumns: string[] = ['category', 'type', 'client_name', 'compamy_name', 'status', 'creation_date', 'documents_count', 'action'];
-  
+
   // ------------------    life cycle of angular    ----------------------- ||
 
   constructor(private apiService: ApiService, private alertService: AlertService, private route: ActivatedRoute, private routr: Router) { }
@@ -42,7 +39,7 @@ export class DocumentsComponent {
     let url = `/documents?clientId=${id}`; // 5f60e62502392e786fa4ae95&financialYear=2020-2021 -- use this Id get data 
     let headers = new HttpHeaders().set("authorization", ` ${localStorage.getItem('token')}`);
     this.apiService.get(url, headers).subscribe((data: any) => {
-      if ( data.records.length > 0 ) {
+      if (data.records.length > 0) {
         this.data = data.records;
         this.page = data._metaData.page;
         this.totalRows = data._metaData.total_count;

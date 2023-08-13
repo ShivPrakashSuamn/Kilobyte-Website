@@ -11,16 +11,11 @@ import { ApiService } from 'src/app/_services/api.service';
 })
 export class ClientsComponent {
 
-
-  search:any='';
   limit:any = 10;
   page:any = 1;
   totalRows:any = 0;
   totalPage:any = 0;
-  order_by:any = 'id'; 
-  order_type:any = 'desc';
   data: any = [];
-  allOrders: any;
   displayedColumns: string[] = ['clientID', 'companyName', 'createdAt', 'name', 'action'];
 
   constructor(private apiService: ApiService, private alertService: AlertService, private route:Router ) {

@@ -13,7 +13,7 @@ export class LoginComponent {
   loginForm: FormGroup;
   submitted: boolean = false;
   hide = true;
-  
+
   constructor(private fb: FormBuilder, private apiService: ApiService, private alertService: AlertService, private route: Router) {
     this.loginForm = fb.group({
       email: ['', Validators.required],
@@ -33,7 +33,7 @@ export class LoginComponent {
         if (data._id) {
           let user = data.email;
           this.alertService.showSuccess('Login SuccessFull ');
-          localStorage.setItem('isLoggedIn','1');
+          localStorage.setItem('isLoggedIn', '1');
           localStorage.setItem('loginUser', JSON.stringify(user));
           localStorage.setItem('token', data.token);
           this.route.navigate(['/users']); // set dedhbord page url

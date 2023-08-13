@@ -9,9 +9,9 @@ import { DocumentUploadedFileComponent } from './pages/document-uploaded-file/do
 const routes: Routes = [
   { path: '', redirectTo: 'auth/login', pathMatch: 'full' },
   { path: 'auth/login', component: LoginComponent },
-  { path: 'users', component: ClientsComponent},
-  { path: 'documents/:id', component: DocumentsComponent},
-  { path: 'documentsFile/:id', component: DocumentUploadedFileComponent},
+  { path: 'users', component: ClientsComponent },
+  { path: 'documents/:id', component: DocumentsComponent },
+  { path: 'documentsFile/:id', component: DocumentUploadedFileComponent },
 ];
 
 @NgModule({
